@@ -91,6 +91,6 @@ FEEDS = {
     "s3://recipe-crawler/%(name)s/%(batch_id)d.json": {
         "format": "json",
         "encoding": "utf8",
-        "batch_item_count": 10,
+        "batch_item_count": 100,
     }
 }
