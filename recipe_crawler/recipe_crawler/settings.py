@@ -87,4 +87,10 @@ DOWNLOAD_DELAY = 1
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-FEED_EXPORT_ENCODING='utf-8'
+FEEDS = {
+    's3://recipe-crawler/%(name)s/%(batch_id)d.json' : {
+        'format': 'json',
+        'encoding': 'utf8',
+        'batch_item_count': 10,
+    }
+}
