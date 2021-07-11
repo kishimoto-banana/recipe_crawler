@@ -10,8 +10,6 @@ class KurashiruSpider(SitemapSpider):
         (r"/recipes/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}$", "parse_recipe"),
     ]
 
-    # strip_pettern = re.compile("^(.)")
-
     def parse_recipe(self, response):
         uid = response.url.split("/")[-1]
         yield {
